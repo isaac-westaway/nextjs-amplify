@@ -6,8 +6,8 @@ import { render } from "@react-email/components";
 import { RateLimiterMemory } from "rate-limiter-flexible";
 import { Email } from "@/components/Email";
 
-const smtpEmail = "noreply.wyndigitalagency@gmail.com";
-const smtpPass = "yfnqpjawhecvkjfc";
+const smtpEmail = process.env.smtpEmail;
+const smtpPass = process.env.smtpPass
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
