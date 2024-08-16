@@ -75,10 +75,9 @@ const rateLimiter = new RateLimiterMemory({
         />
       );
   
-      const BusinessOptions = {
+      const EmailOptions = {
         from: smtpEmail,
         to: ["i.westaway3119@gmail.com", email],
-        bcc: "wyndigitalagency@gmail.com",
         subject: "Amplify Test",
         html: emailHtml,
       };
@@ -87,7 +86,7 @@ const rateLimiter = new RateLimiterMemory({
         const rateLimiterResponse: RateLimiterResponse =
           await rateLimiter.consume(clientIp);
   
-        await transporter.sendMail(BusinessOptions);
+        await transporter.sendMail(EmailOptions);
   
         return NextResponse.json({ success: true });
       } catch (rateLimiterResponse) {
