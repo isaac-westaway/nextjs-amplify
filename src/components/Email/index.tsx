@@ -1,4 +1,4 @@
-import { Body, Container, Head, Heading, Html, Img, Tailwind, Text } from "@react-email/components"
+import { Body, Container, Head, Heading, Html, Tailwind, Text } from "@react-email/components"
 
 type EmailProps = {
     name: string,
@@ -18,12 +18,6 @@ export const Email: React.FC<Readonly<EmailProps>> = ({
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-[40px] w-[465px] rounded border border-solid border-[#eaeaea] px-[20px]">
             <Heading className="mx-auto text-center items-center mb-[20px] mt-[20px]">
-              <Img
-                src="https://wyndigital.net/logo/fulllogo.png"
-                alt="Logo"
-                width="130"
-                className="mx-auto"
-              />
             </Heading>
             <Heading className="text-[14px] leading-[24px] text-black">
               Amplify Test
